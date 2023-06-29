@@ -1,6 +1,11 @@
 *
     background: rgba(0, 0, 255, 0.03)
     
+body
+    margin: 0
+    padding: 0
+    font-family: Roboto
+
 header
     width: 100%
     height: 4rem
@@ -8,6 +13,49 @@ header
     flex-direction: row
     justify-content: space-between
     align-items: center
+    background-color: #000
+    .logo
+        margin-left: 1rem
+        margin-top: .4rem
+        @keyframes pulse 
+            from 
+                transform: scale(1)
+            to
+                transform: scale(1.1)
+        &:hover
+            animation-name: pulse
+            animation-duration: .2s
+            animation-iteration-count: infinite
+            animation-direction: alternate
+    nav
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        a
+            margin-right: 2rem
+            color: #FFF
+            font-size: 18px
+            font-weight: 500
+            text-decoration: none
+            &:last-child
+                margin-right: 0
+            &:hover
+                font-size: 22px
+                border-bottom: 2px solid#20C4C6
+                transition: all .2s ease-in-out
+            &.active
+                font-size: 22px
+                font-weight: 600
+                border-bottom: 4px solid#20C4C6
+    .social > a
+        display: inline-block
+        margin-left: 1rem
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: 1rem
+
 
 section
     width: 100%
